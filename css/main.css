@@ -5,6 +5,7 @@ body {
 	color: black;
 	font-size: 16px;
     background-color:#ec78;
+    overflow-x: hidden;
 }
 
 * {
@@ -64,27 +65,73 @@ ul, li {
 }
 
 .header {
-	background: url('../img/bg2.jpg') no-repeat center top / cover;
+    z-index: 20;
+    width: 100vw;
 	padding-top: 57px;
 	color: #fff;
-	padding-bottom: 322px
+    margin-bottom: calc(20vw + 325px);
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+@media(max-width: 1500px){
+    .bg{
+        width: 100%;
+        height: 60vh;
+    }
+}
+@media(max-width: 1000px){
+    .bg{
+        height: 45%;
+    }
+}
+@media(max-width: 767px){
+    .bg{
+        height: 20%;
+    }
 }
 
 header a {
+    z-index: 20;
 	color: #fff;
 }
 
 .logo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
 	margin-right: 69px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.logo img{
+    width: 90%;
+    height: 90%;
 }
 
 .menu {
+    z-index: 20;
 	display: flex;
     margin: 0px;
     padding: 0;
 }
 
 .menu li a {
+    z-index: 20;
 	text-transform: uppercase;
 	font-size: 14px;
 	letter-spacing: 0.1em;
@@ -95,37 +142,45 @@ header a {
 }
 
 .menu li {
+    z-index: 20;
 	margin-right: 40px;
 }
 
 .tel {
+    z-index: 20;
 	font-size: 17px;
 	margin-left: auto;
 	letter-spacing: 0.1em;
 }
 
 .nav {
+    z-index: 20;
 	display: flex;
 	align-items: center;
 }
 
 .offer {
+    position: relative;
+    z-index: 20;
 	margin-top: 216px;
 }
 
 .offer p {
+    z-index: 20;
 	font-size: 30px;
 	letter-spacing: 0.1em;
 }
 
 .offer h1 {
+    z-index: 20;
 	font-size: 100px;
 	margin-bottom: 19px;
 	margin-top: -9px;
-	letter-spacing: 0.02em
+	letter-spacing: 0.02em;
 }
 
 .btn {
+    z-index: 20;
 	display: block;
 	font-size: 17px;
 	text-align: center;
@@ -140,6 +195,8 @@ header a {
 	background: #fff;
     color: #000;
 }
+
+
 
 .description {
 	display: flex;
@@ -158,7 +215,6 @@ header a {
 }
 
 .gallery {
-	margin-top: 67px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -172,10 +228,35 @@ header a {
 	transform: scale(1.1);
 }
 
+
+
+@media(max-width: 1200px){
+    .container{
+         max-width: 900px;   
+    }
+    .gallery{
+        gap: 40px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+    }
+    .gallery img{
+        width: 700px;
+        height: 1000px;
+    }
+}
+
+
 .footer-text {
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
 	display: flex;
+    align-items: center;
+    justify-content: center;
 	padding: 114px 0
 }
 
